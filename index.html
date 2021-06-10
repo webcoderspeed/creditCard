@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <div class="credit-card">
+    <h3 class="payment-details">Payment details</h3>
+    <form>
+    <input required type="text" placeholder="Card Holder Name" class="card-holder-name"/>
+    <div class="card-number">
+      <input required type="number" placeholder="XXXX" maxlength="4" />
+      <input required type="number" placeholder="XXXX" maxlength="4" />
+      <input required type="number" placeholder="XXXX" maxlength="4" />
+      <input required type="number" placeholder="XXXX" maxlength="4" onKeyPress="if(this.value.length==4) return false;" />
+    </div>
+    <div class="expiry-date">
+      <input required type="date" placeholder="Expiry Date" class="date">
+      <input required type="number" placeholder="CVV" class="cvv" onKeyPress="if(this.value.length==3) return false;" >
+    </div>
+    <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <div class="saved-card-details">
+  </div>
+
+</body>
+</html>
+

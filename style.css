@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #41295a, #2f0743);
+  margin: 5%;
+  overflow: hidden;
+}
+
+.credit-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 450px;
+  line-height: 50px;
+  background: linear-gradient(to bottom, #cb2d3e, #ef473a);
+  font-family: 'Contrail One', cursive;
+}
+
+.credit-card h3 {
+  color: #f8f8f8;
+}
+
+@media screen and (max-width: 480px) {
+  .credit-card {
+    width: 300px;
+  }
+  .credit-card input {
+    font-size: 0.8rem;
+  }
+}
+
+input {
+  width: 100%;
+  outline: 0;
+  padding: 0.2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.card-number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.expiry-date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  margin: 2% auto;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 2rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border: 1px solid;
+  color: #fff;
+  cursor: pointer;
+}
+
+.saved-card-details {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 50%;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #cb2d3e, #ef473a);
+}
+
+@media screen and (max-width: 480px) {
+  .saved-card-details {
+    width: 90%;
+    left: 5%;
+    padding: 1rem;
+  }
+}
+
+.saved-card-details table {
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Courier New', Courier, monospace !important;
+  color: #fff;
+  border: 2px solid white;
+}
+
+.saved-card-details table tr {
+  position: relative;
+}
+
+.saved-card-details table tr:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.saved-card-details table tr:hover .remove {
+  display: flex;
+}
+
+.saved-card-details table .remove {
+  display: none;
+  color: #2f0743;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  width: 5%;
+  transform: translate(-28px, 1px);
+  height: 25px;
+  top: 20%;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
