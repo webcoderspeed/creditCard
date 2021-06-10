@@ -91,7 +91,7 @@ button {
   .saved-card-details {
     width: 90%;
     left: 5%;
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -103,6 +103,19 @@ button {
   color: #fff;
   border: 2px solid white;
 }
+@media screen and (max-width: 480px) {
+  .saved-card-details table{
+    line-height: 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .saved-card-details table:hover .remove{
+    display: none !important;
+  }
+}
+
 
 .saved-card-details table tr {
   position: relative;

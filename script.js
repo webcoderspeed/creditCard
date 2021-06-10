@@ -76,6 +76,7 @@ form.addEventListener('submit', (e) => {
   localStorage.setItem('cardDetails', JSON.stringify(cardDetails))
 
   // Showing list of saved card
+  form.reset();
   getSaveCard();
 })
 
@@ -114,10 +115,7 @@ savedCard.innerHTML = `<table border='1'>
     const card = e.target.parentNode;
     filterCard(card)
     e.target.parentNode.remove();
-    setTimeout(() => {
-    alert('card remove successfully!');
     savedCard.style.display = 'none';
-    }, 100)
   })
 
 
